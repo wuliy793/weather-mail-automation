@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # 1. 获取代码
+      # 1. 检出代码
       - name: Checkout code
         uses: actions/checkout@v4
         
@@ -41,7 +41,7 @@ jobs:
           RECEIVER_EMAILS: ${{ secrets.RECEIVER_EMAILS }}
           
           # 天气相关配置
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           LOCATION_CITY: ${{ secrets.LOCATION_CITY }}
         run: python main.py
         
