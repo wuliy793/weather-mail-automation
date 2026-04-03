@@ -40,7 +40,7 @@ jobs:
           # 收件人配置（多个邮箱用逗号分隔）
           RECEIVER_EMAILS: ${{ secrets.RECEIVER_EMAILS }}
           
-          # 天气相关配置
+          # OpenWeatherMap API 配置
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           LOCATION_CITY: ${{ secrets.LOCATION_CITY }}
         run: python main.py
